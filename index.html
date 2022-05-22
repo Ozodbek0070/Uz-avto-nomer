@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/raqam.css">
+
+</head>
+<body>
+
+<section class="showcase">
+	<video src="video uz auto/Infinity.mp4" autoplay loop muted></video>
+	<h1 class="title">UZ AUTO NOMER</h1>
+</section>
+
+
+<div class="container">
+	<label class="texts">Shaxs:</label>
+	<select id="shaxs">
+		<option selected disabled>Tanlang...</option>
+		<option value="jismoniy">Jismoniy</option>
+		<option value="yuridik">Yuridik</option>
+	</select>
+
+	<!-- bo'sh joy -->
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label class="texts">Viloyat:</label>	 
+	<select id="viloyat">
+		<option selected disabled>Tanlang...</option>
+		<option value="far">Farg'ona</option>
+		<option value="nam">Namangan</option>
+		<option value="and">Andijon</option>
+		<option value="tos">Toshkent</option>
+	</select>
+
+	<!-- bo'sh joy -->
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label class="texts">Raqam:</label>
+	<select id="raqam">
+		<option selected disabled>Tanlang...</option>
+		<option value="777">777</option>
+		<option value="111">111</option>
+		<option value="555">555</option>
+		<option value="070">070</option>
+		<option value="010">011</option>
+		<option value="550">770</option>
+		<option value="497">497</option>
+		<option value="125">125</option>
+		<option value="481">481</option>
+	</select><br><br><br>
+
+	<!-- bo'sh joy -->
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+
+	<!------------------- button ------------------------------>
+	<button id="yasash">Nomer yasash</button><br><br><br>
+
+	<!-- bo'sh joy -->
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<label class="texts">Nomer: </label>
+	<input type="text" name="" id="nomer">
+	&nbsp;&nbsp;&nbsp;
+	<label class="texts">Narx:</label>
+	<input type="text" name="" id="narx">
+</div>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		let shaxs = $("#shaxs")
+        let viloyat = $('#viloyat')
+        let raqam = $('#raqam')
+        let narx = $('#narx')
+        let nomer = $('#nomer')
+
+        $("#yasash").click(function(){
+        	if(shaxs.val() == 'yuridik'){
+	            if(viloyat.val() == 'far'){
+	            nomer.val('40 | ' +raqam.val()+ ' UZB')
+	            }
+	            if(viloyat.val() == 'tos'){
+	                nomer.val('01 | '+raqam.val()+' UZB')
+	            }
+	            if(viloyat.val() == 'nam'){    
+	                nomer.val('50 | '+raqam.val()+' UZB')
+	            }
+	            if(viloyat.val() == 'and'){
+	                nomer.val('60 | '+raqam.val()+' UZB')
+	            }    
+   			} 
+
+   			if(shaxs.val() == 'jismoniy'){
+	            if(viloyat.val() == 'far'){
+	            nomer.val('40 | '+ 'A'+ raqam.val()+' AA')
+		        }
+		        if(viloyat.val() == 'tos' ){
+		            nomer.val('01 | '+ 'A'+ raqam.val()+' AA')
+		        }
+		        if(viloyat.val() == 'nam'){    
+		            nomer.val('50 | '+ 'A' + raqam.val()+' AA')
+		        }
+		        if(viloyat.val() == 'and'){
+		            nomer.val('60 | '+ 'A' + raqam.val()+' AA')
+		        }    
+        	}
+
+        	if(raqam.val() == '777'){
+            	narx.val('15 000 000')
+			}
+			if(raqam.val() == '111'){
+            	narx.val('15 000 000')
+			}
+			if(raqam.val() == '555'){
+            	narx.val('15 000 000')
+			}
+			if(raqam.val() == '070'){
+            	narx.val('2 000 000')
+			}
+			if(raqam.val() == '011'){
+            	narx.val('1 00 000')
+			}
+			if(raqam.val() == '770'){
+            	narx.val('1 500 000')
+			}
+			if(raqam.val() == '497'){
+            	narx.val('500')
+			}
+			if(raqam.val() == '481'){
+            	narx.val('500')
+			}
+			if(raqam.val() == '125'){
+            	narx.val('700')
+			}
+
+		})
+    })
+
+</script>
+</body>
+</html>
